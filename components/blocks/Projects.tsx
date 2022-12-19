@@ -6,12 +6,12 @@ const projects = [
     {
         title: "Sequelix",
         description: "Innovative note-taking application with the creation of links between them. Not just notes but new ideas, new understanding.",
-        url: "/sb.png"
+        url: "/sb.jpg"
     },
     {
         title: "Refactor",
         description: "AI-based project ment for prediction of energy flow and state of equipment in energy-supply system.",
-        url: "/refactor.png"
+        url: "/refactor.jpg"
     },
 ]
 
