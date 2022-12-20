@@ -22,6 +22,7 @@ export default function Projects() {
 
     return (
         <div className={style.wrapper}>
+            <img src="/abstract-1.png" alt="" className='blur-sm absolute sm:-translate-x-[50%]'/>
             <h2 className={common.title}>
                 Milestone Projects
             </h2>
