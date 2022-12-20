@@ -13,14 +13,14 @@ export default function Title() {
       window.addEventListener("scroll", ()=>{setScroll(window.scrollY)})
     }, [])
     const grad = (s : string) => `radial-gradient(rgb(${s}), rgb(${s} / 0.7) 50%, #fff0 80%)`
-    const trans = (a : number, b : number) => `translate(calc(-50% ${a > 0?"+":""}${a}vw), calc(-50% ${b > 0?"+":""}${b}10vw))`
+    
   return (
     <>
         <div className={style.wrapper}>
         <div className={style.back}>
             <div className={classNames(style.flare, "bg-blue-500")} 
                 style={{
-                    transform: trans(0, 0),
+                    transform: `translate(-50%, -50%)`,
                     width: `15vw`,
                     height: `15vw`,
                     animationDelay: "0s",
@@ -28,7 +28,7 @@ export default function Title() {
                 }}></div>
             <div className={classNames(style.flare, "bg-indigo-500")} 
                 style={{
-                    transform: trans(-200, 10),
+                    transform: `translate(calc(-50% - 10vw), calc(-50% + 10vw))`,
                     width: `20vw`,
                     height: `20vw`,
                     animationDelay: "2.5s",
@@ -36,7 +36,7 @@ export default function Title() {
                 }}></div>
             <div className={classNames(style.flare, "bg-sky-500")} 
                 style={{
-                    transform: trans(5, 10),
+                    transform: `translate(calc(-50% + 5vw), calc(-50% + 10vw))`,
                     width: `13vw`,
                     height: `13vw`,
                     animationDelay: "1s",
@@ -44,7 +44,7 @@ export default function Title() {
                 }}></div>
             <div className={classNames(style.flare, "bg-teal-500")} 
                 style={{
-                    transform: trans(5, -10),
+                    transform: `translate(calc(-50% + 5vw), calc(-50% - 10vw))`,
                     width: `20vw`,
                     height: `20vw`,
                     animationDelay: "1s",
@@ -52,7 +52,7 @@ export default function Title() {
                 }}></div>
             <div className={classNames(style.flare, "bg-indigo-500")} 
                 style={{
-                    transform: trans(10, 0),
+                    transform: `translate(calc(-50% + 10vw), calc(-50%))`,
                     width: `13vw`,
                     height: `13vw`,
                     animationDelay: "1.5s",
@@ -60,7 +60,7 @@ export default function Title() {
                 }}></div>
             <div className={classNames(style.flare, "bg-purple-500")} 
                 style={{
-                    transform: trans(-10, -3),
+                    transform: `translate(calc(-50% - 10vw), calc(-50% - 3vw))`,
                     width: `15vw`,
                     height: `15vw`,
                     animationDelay: "3.5s",
@@ -68,7 +68,7 @@ export default function Title() {
                 }}></div>
             <div className={classNames(style.flare, "bg-teal-500")} 
                 style={{
-                    transform: trans(0, 3),
+                    transform: `translate(calc(-50% ), calc(-50% + 3vw))`,
                     width: `15vw`,
                     height: `15vw`,
                     animationDelay: "4s",
