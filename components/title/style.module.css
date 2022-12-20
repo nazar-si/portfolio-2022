@@ -18,9 +18,16 @@
       left: 50%;
       transform: translate(-50%, -50%);
       @apply rounded-full;
-      filter: blur(5vw);
+      filter: blur(3vw);
       animation: flicker 5s infinite;
       translate: -5vw -2vw;
+      animation-timing-function: ease-in-out;
+      @media screen and (max-width: 1024px) {
+        scale: 2;
+      }
+      @media screen and (max-width: 640px) {
+        scale: 3;
+      }
     }
     .left {
       position: absolute;
@@ -50,20 +57,20 @@
       animation: flicker2 5s infinite;
     }
     .rect1 {
-      opacity: 5%;
-      @apply border-2 border-white;
+      @apply border-2 border-white/[7%];
       position: absolute;
       top: 50%;
       left: -5%;
       transform: rotate(30deg);
+      animation: title-intro 5s;
     }
     .rect2 {
-      opacity: 5%;
-      @apply border-2 border-white;
+      @apply border-2 border-white/[7%];
       position: absolute;
       top: 25%;
       right: -5%;
       transform: rotate(-30deg);
+      animation: title-intro 5s;
     }
     .circ1,
     .circ2 {
@@ -125,11 +132,13 @@
   0%,
   100% {
     opacity: 100%;
-    translate: -5vw -2vw;
+    translate: -1vw -1vw;
+    rotate: 0;
   }
   50% {
     opacity: 20%;
-    translate: 5vw 2vw;
+    translate: 1vw 1vw;
+    rotate: 10deg;
   }
 }
 @keyframes title-intro {

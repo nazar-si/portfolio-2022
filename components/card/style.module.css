@@ -1,4 +1,12 @@
 .wrapper {
   border-width: 1px;
-  @apply bg-gray-800 border-gray-700;
+  @apply bg-zinc-800 border-zinc-700;
+  .flare {
+    opacity: 0;
+  }
+  &:hover {
+    .flare {
+      opacity: 1;
+    }
+  }
 }

@@ -1,0 +1,38 @@
+.wrapper {
+  @apply my-8;
+  width: 100%;
+  @apply flex justify-center items-center;
+  flex-direction: column;
+
+  background: linear-gradient(
+    90deg,
+    #0000,
+    rgb(24 24 28) 40%,
+    rgb(24 24 28) 60%,
+    #0000
+  );
+  hr {
+    border: none;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, #0000 20%, #fff3, #000 80%);
+    margin: 0;
+  }
+  @media screen and (max-width: 640px) {
+    background: linear-gradient(
+      90deg,
+      #0000,
+      rgb(24 24 28) 20%,
+      rgb(24 24 28) 80%,
+      #0000
+    );
+    hr {
+      background: linear-gradient(90deg, #0000, #fff3, #000);
+    }
+  }
+  .content {
+    @apply p-4;
+    width: 90%;
+    max-width: 1200px;
+  }
+}

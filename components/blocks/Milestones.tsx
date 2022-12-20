@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import style from "./milestones.module.css"
+import common from "./common.module.css"
 import React, { useState } from 'react'
 
 const projects = [
@@ -21,10 +22,10 @@ export default function Projects() {
 
     return (
         <div className={style.wrapper}>
-            <h2 className={style.title}>
+            <h2 className={common.title}>
                 Milestone Projects
             </h2>
-            <h3 className={style.subtitle}>Biggest projects I am working with.</h3>
+            <h3 className={common.subtitle}>Biggest projects I am working with.</h3>
             <div className={style.container}>
                 <div className={style.column}>
                     {projects.map((p, id)=>
