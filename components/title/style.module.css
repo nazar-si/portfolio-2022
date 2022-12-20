@@ -20,7 +20,7 @@
       @apply rounded-full;
       filter: blur(3vw);
       animation: flicker 5s infinite;
-      translate: -5vw -2vw;
+      translate: -1vw -1vw;
       animation-timing-function: ease-in-out;
       @media screen and (max-width: 1024px) {
         scale: 2;
