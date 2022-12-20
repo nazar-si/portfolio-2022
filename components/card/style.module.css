@@ -1,0 +1,4 @@
+.wrapper {
+  border-width: 1px;
+  @apply bg-gray-800 border-gray-700;
+}

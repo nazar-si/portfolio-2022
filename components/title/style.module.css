@@ -20,6 +20,7 @@
       @apply rounded-full;
       filter: blur(5vw);
       animation: flicker 5s infinite;
+      translate: -5vw -2vw;
     }
     .left {
       position: absolute;
@@ -113,6 +114,9 @@
     }
     .subtitle {
       @apply text-xl text-white/75;
+      opacity: 0;
+      animation: title-intro 2.5s 1.5s;
+      animation-fill-mode: forwards;
     }
   }
 }

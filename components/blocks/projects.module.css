@@ -1,116 +1,18 @@
 .wrapper {
-  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin: 4rem 0;
-  overflow-x: hidden;
-  h2.title {
-    @apply text-4xl font-bold;
-  }
-  h3.subtitle {
-    @apply text-xl font-light;
-  }
-  .container {
-    @apply my-16;
+  flex-direction: column;
+  .grid {
+    display: flex;
+    align-items: center;
     width: 90%;
-    height: 48rem;
-    max-width: 80rem;
-
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    @media screen and (max-width: 1200px) {
-      grid-template-columns: none;
-      height: auto;
-    }
-
+    max-width: 1280px;
+    flex-wrap: wrap;
     .column {
+      min-width: 20rem;
+      flex: 1;
       display: flex;
-      @apply flex-col justify-center;
-      height: 100%;
-      @media screen and (max-width: 1200px) {
-        @apply justify-start;
-      }
-      button {
-        width: 100%;
-        padding: 1.5rem;
-        display: flex;
-        flex-direction: column;
-        @apply rounded-l-md border-transparent transition-all hover:bg-white/5 hover:border-white/10;
-        transition: 0.2s;
-        @media screen and (max-width: 1200px) {
-          @apply rounded-md;
-        }
-        border-width: 1px;
-        position: relative;
-        .projectTitle {
-          @apply text-lg;
-        }
-        .projectDescription {
-          @apply font-light text-white/80;
-          text-align: left;
-        }
-        &::before,
-        &::after {
-          z-index: -1;
-          content: " ";
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          right: 0;
-          width: 0;
-          opacity: 0;
-          filter: blur(2rem);
-          @apply bg-sky-500 transition-all;
-          transition: 0.2s, width 1s;
-        }
-        &::after {
-          @apply bg-purple-500;
-        }
-        &.selected {
-          transition: 0.3s;
-          @apply bg-white/10;
-          @apply border-white/10 border-l-white/20  border-r-0;
-          &::before {
-            opacity: 1;
-            width: 50%;
-            height: calc(100% + 2rem);
-            filter: blur(5rem);
-            transform: translateY(-1rem);
-          }
-          &::after {
-            opacity: 1;
-            width: 4rem;
-            height: calc(100% + 8rem);
-            filter: blur(4rem);
-            transform: translate(50%, -4rem);
-          }
-        }
-      }
-    }
-    .content {
-      position: relative;
-      z-index: 1;
-      box-shadow: 0 0 5rem -2rem #0084ff;
-      .placeholder {
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        bottom: 0;
-        width: 150%;
-        @media screen and (max-width: 1200px) {
-          position: relative;
-          width: 110%;
-          transform: translate(-5%);
-        }
-        img {
-          @apply rounded-xl;
-          width: auto;
-          height: 100%;
-          object-fit: cover;
-          object-position: left center;
-        }
-      }
+      flex-direction: column;
     }
   }
 }
