@@ -33,7 +33,7 @@ export default function roadmap() {
             <h2 className={common.title}>Roadmap</h2>
             <h2 className={common.subtitle}>Things I've experienced so far.</h2>
             <br />
-            {Entries.map((e, i) => <div className={style.entry}>
+            {Entries.map((e, i) => <div className={style.entry} key={i}>
                 <div className={style.road}>
                     <div className={style.circle}>
                         <GitCommit />

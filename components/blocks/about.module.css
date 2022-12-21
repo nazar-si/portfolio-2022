@@ -4,13 +4,13 @@
   @apply flex justify-center items-center;
   flex-direction: column;
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     90deg,
     #0000,
     rgb(24 24 28) 40%,
     rgb(24 24 28) 60%,
     #0000
-  );
+  ); */
   hr {
     border: none;
     height: 1px;
@@ -19,13 +19,13 @@
     margin: 0;
   }
   @media screen and (max-width: 640px) {
-    background: linear-gradient(
+    /* background: linear-gradient(
       90deg,
       #0000,
       rgb(24 24 28) 20%,
       rgb(24 24 28) 80%,
       #0000
-    );
+    ); */
     hr {
       background: linear-gradient(90deg, #0000, #fff3, #000);
     }
@@ -34,5 +34,51 @@
     @apply p-4;
     width: 90%;
     max-width: 1200px;
+  }
+  .imageCard{
+    position: relative;
+    z-index: 4;
+    &::before, &::after{
+      z-index: -2;
+      position: absolute;
+      content: " ";
+      left: -5%;
+      right: -5%;
+      height: 80%;
+      opacity: 0.25;
+    }
+    &::before{
+      /* @apply bg-indigo-500; */
+      background: radial-gradient(rgb(99 102 241) 50% , #fff0);
+      top: -5%;
+      animation: indigo-rose 5s infinite;
+    }
+    &::after{
+      background: radial-gradient(rgb(20 184 166) 50%, #fff0);
+      bottom: -10%;
+      animation: blue-teal 5s infinite;
+    }
+  }
+}
+
+
+@keyframes blue-teal{
+  0%, 100% {
+    /* @apply bg-teal-500; */
+    filter: hue-rotate(-15deg) blur(2rem);
+  }
+  50%{
+    /* @apply bg-blue-500; */
+    filter: hue-rotate(30deg) blur(2rem);
+  }
+}
+@keyframes indigo-rose{
+  0%, 100% {
+    /* @apply bg-indigo-500; */
+    filter: hue-rotate(-45deg) blur(2rem);
+  }
+  50%{
+    /* @apply bg-rose-500; */
+    filter: hue-rotate(45deg) blur(2rem);
   }
 }

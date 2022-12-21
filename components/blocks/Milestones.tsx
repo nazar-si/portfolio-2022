@@ -30,7 +30,7 @@ export default function Projects() {
             <div className={style.container}>
                 <div className={style.column}>
                     {projects.map((p, id)=>
-                        <button className={classNames({[style.selected]: selected == id })} onClick={()=>{setSelected(id)}}>
+                        <button className={classNames({[style.selected]: selected == id })} onClick={()=>{setSelected(id)}} key={id}>
                             <div className={style.projectTitle}>{p.title}</div>
                             <div className={style.projectDescription}>{p.description}</div>
                         </button>
