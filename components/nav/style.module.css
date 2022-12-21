@@ -9,6 +9,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  backdrop-filter: blur(8px);
   .cover {
     z-index: -2;
     position: absolute;
@@ -36,7 +37,7 @@
       margin: 0.5rem 1rem;
       background: #0004;
       text-shadow: 0 0 2px #000;
-      @apply border-[1px] rounded-md border-transparent text-zinc-350 transition-all font-semibold;
+      @apply border-[1px] rounded-md border-transparent text-white/75 transition-all font-semibold;
       padding: 0.5rem 1rem;
       &:hover {
         @apply border-zinc-500 bg-white/5 text-zinc-200;

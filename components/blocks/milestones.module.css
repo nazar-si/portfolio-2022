@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 4rem 0;
+  padding: 4rem 0;
   overflow-x: hidden;
 
   .container {
@@ -89,7 +89,7 @@
       box-shadow: 0 0 5rem -1rem #0084ff;
       .placeholder {
         position: absolute;
-        overflow: hidden;
+        overflow-x: hidden;
         top: 0;
         bottom: 0;
         width: 150%;
