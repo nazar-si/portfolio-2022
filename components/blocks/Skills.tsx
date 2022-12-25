@@ -318,7 +318,7 @@ export default function Skills() {
                         
                     <div className={style.skills}>
                         {Apps.map((E, i)=>
-                            <button key={i} className={classNames(style.skill, {[style.selected] : i == selected})} onClick={()=>{setPrevSelected(selected); setSelected(i == selected?-1:i)}}>
+                            <button key={i} className={classNames(style.skill, {[style.selected] : i == selected})} onClick={()=>{setPrevSelected(selected); setSelected(i == selected?-1:i)}} title={E.name}>
                                 <E.icon size={32} strokeWidth={1}/>
                             </button>)}
                     </div>
