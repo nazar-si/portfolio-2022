@@ -8,14 +8,22 @@ export default function About() {
     <div className={style.wrapper}>
         <hr />
       <div className={style.content}>
-        <h2 className={common.title + " w-[100%] text-center"}>
+        {/* <h2 className={common.title + " w-[100%] text-center"}>
           Who am I?
-        </h2>
-        <div className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-          <Card className={"rotate-[-3deg] translate-x-5 md:translate-x-0 " + style.imageCard}>
+        </h2> */}
+        <div className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-1 lg:grid-cols-3 items-center justify-center">
+          <Card className={"rotate-[-3deg] translate-x-5 md:translate-x-0 w-fit max-w-[400px] m-auto lg:m-8 " + style.imageCard}>
             <img src="/pic.jpg" alt="" className="rounded-md border-[1px] border-white/25"/>
           </Card>
-          <Card className={"col-span-2"}>Test</Card>
+          <div className="col-span-2 m-4 rounded-lg bg-black/30 relative">
+            <h3 className="text-xl font-bold m-4">Hello, my name is Nazar</h3>
+            <section className="text-light m-4">
+              I am a lead frontend developer and project manager of Entropy Concept team - group of enthusiasts with a common main goal to bring innovation to the world.
+              <br /> <br />
+              Currently I am studying physics and data science at Higher School of Economics. Development became essential in my life as it required to compute behavior of complex systems and analyse state of different models.
+    
+            </section>
+          </div>
         </div>
       </div>
         <hr />

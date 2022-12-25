@@ -33,6 +33,7 @@
 
 .card {
   @apply bg-black/40 border-none rounded-lg;
+  backdrop-filter: blur(6px);
   opacity: 0;
   width: 0;
   transition: 0.3s;
@@ -58,14 +59,14 @@
     background: linear-gradient(90deg, #fff0, #fff8 30%, #fff0);
   }
   .description {
-    @apply font-normal;
+    @apply font-light;
   }
 }
 
 .backIcon {
   position: absolute;
   @apply text-fuchsia-500;
-  filter: blur(2rem);
+  filter: blur(1rem);
   opacity: 0.5;
   /* svg {
     @apply fill-blue-500;
@@ -74,25 +75,25 @@
 .backIcon2 {
   position: absolute;
   /* @apply text-indigo-500; */
-  filter: blur(0.5rem);
-  transform: translate(1rem, 0.5rem);
+  filter: blur(0.25rem);
+  transform: translate(0.4rem, 0.2rem);
 }
 .backIcon3 {
   position: absolute;
   /* @apply text-teal-500; */
-  filter: blur(0.1rem);
-  transform: translate(0.5rem, 0.25rem);
+  filter: blur(0.05rem);
+  transform: translate(0.25rem, 0.125rem);
 }
 
 .icon {
   z-index: -1;
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   position: absolute;
-  top: 10rem;
+  top: 15rem;
   bottom: 0;
-  right: 50%;
-  transform: scale(2) translate(50%);
+  right: 40%;
+  transform: scale(4) translate(25%);
   .appear {
     opacity: 0;
     animation: appear 0.5s;
@@ -105,9 +106,9 @@
   }
   @media screen and (max-width: 640px) {
     left: 50%;
-    bottom: 0;
+    bottom: 10rem;
     top: auto;
-    transform: scale(1.5) translate(calc(-33% - 0.5rem));
+    transform: scale(3) translate(calc(-16% - 0.5rem));
   }
 }
 

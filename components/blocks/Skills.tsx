@@ -302,15 +302,15 @@ export default function Skills() {
 
                 <div className={style.icon}>
                     {Apps.map((e,i)=><>
-                    {(i == selected || i == prevSelected) && <div className={classNames({[style.remove]: i == prevSelected, [style.appear]: i == selected})}>
+                    {(i == selected || i == prevSelected) && <div key={i} className={classNames({[style.remove]: i == prevSelected, [style.appear]: i == selected})}>
                         <div className={style.backIcon}>
-                            <e.icon size={300} strokeWidth={1} stroke={Palet[e.palet].back} fill={Palet[e.palet].back}></e.icon>
+                            <e.icon size={150} strokeWidth={1} stroke={Palet[e.palet].back} fill={Palet[e.palet].back}></e.icon>
                         </div>
                         <div className={style.backIcon2}>
-                            <e.icon size={300} strokeWidth={1} stroke={Palet[e.palet].second}></e.icon>
+                            <e.icon size={150} strokeWidth={1} stroke={Palet[e.palet].second}></e.icon>
                         </div>
                         <div className={style.backIcon3}>
-                            <e.icon size={300} strokeWidth={0.2} stroke={Palet[e.palet].primary}></e.icon>
+                            <e.icon size={150} strokeWidth={0.2} stroke={Palet[e.palet].primary}></e.icon>
                         </div>
                     </div>}</>)}
                 </div>
