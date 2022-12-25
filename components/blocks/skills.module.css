@@ -64,19 +64,22 @@
 
 .backIcon {
   position: absolute;
-  @apply text-blue-500;
+  @apply text-fuchsia-500;
   filter: blur(2rem);
   opacity: 0.5;
+  /* svg {
+    @apply fill-blue-500;
+  } */
 }
 .backIcon2 {
   position: absolute;
-  @apply text-indigo-500;
+  /* @apply text-indigo-500; */
   filter: blur(0.5rem);
   transform: translate(1rem, 0.5rem);
 }
 .backIcon3 {
   position: absolute;
-  @apply text-teal-500;
+  /* @apply text-teal-500; */
   filter: blur(0.1rem);
   transform: translate(0.5rem, 0.25rem);
 }
