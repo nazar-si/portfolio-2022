@@ -1,0 +1,126 @@
+.wrapper {
+  @apply py-20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  .container {
+    overflow-y: hidden;
+    display: flex;
+    @apply justify-center items-center;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    margin: 2rem;
+  }
+}
+
+.skills {
+  @apply flex max-w-[600px] gap-8 justify-center text-zinc-300 flex-wrap z-[1] m-4;
+
+  .skill {
+    @apply p-2 border-zinc-700 border-[1px] bg-zinc-800 rounded-full hover:border-blue-500 hover:text-blue-500 transition-all;
+    z-index: 1;
+    &.selected {
+      @apply border-blue-500;
+      box-shadow: 0 0 1rem rgb(59 130 246);
+    }
+  }
+}
+
+.card {
+  @apply bg-black/40 border-none rounded-lg;
+  opacity: 0;
+  width: 0;
+  transition: 0.3s;
+  z-index: 1;
+  max-height: 8rem;
+  &.show {
+    opacity: 1;
+    flex: 1;
+    min-width: 300px;
+    margin: 1rem;
+    padding: 1rem;
+    max-height: unset;
+  }
+  .title {
+    @apply text-xl font-semibold text-white mb-2;
+  }
+  .percent {
+    @apply text-teal-300;
+  }
+  hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, #fff0, #fff8 30%, #fff0);
+  }
+  .description {
+    @apply font-normal;
+  }
+}
+
+.backIcon {
+  position: absolute;
+  @apply text-blue-500;
+  filter: blur(2rem);
+  opacity: 0.5;
+}
+.backIcon2 {
+  position: absolute;
+  @apply text-indigo-500;
+  filter: blur(0.5rem);
+  transform: translate(1rem, 0.5rem);
+}
+.backIcon3 {
+  position: absolute;
+  @apply text-teal-500;
+  filter: blur(0.1rem);
+  transform: translate(0.5rem, 0.25rem);
+}
+
+.icon {
+  z-index: -1;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 10rem;
+  bottom: 0;
+  right: 50%;
+  transform: scale(2) translate(50%);
+  .appear {
+    opacity: 0;
+    animation: appear 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .remove {
+    opacity: 1;
+    animation: remove 2s;
+    animation-fill-mode: forwards;
+  }
+  @media screen and (max-width: 640px) {
+    left: 50%;
+    bottom: 0;
+    top: auto;
+    transform: scale(1.5) translate(calc(-33% - 0.5rem));
+  }
+}
+
+@keyframes remove {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

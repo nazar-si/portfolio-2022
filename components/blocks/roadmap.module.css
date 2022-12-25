@@ -20,7 +20,7 @@
           margin-left: -1.5rem;
         }
         .circle {
-          @apply border-[1px] border-zinc-700 bg-zinc-800 w-8 h-8;
+          @apply border-[1px] border-zinc-700 bg-zinc-800 w-8 h-8 transition-all;
           @apply flex items-center justify-center;
           border-radius: 100%;
           @apply text-zinc-500;
@@ -57,7 +57,7 @@
         }
       }
       .content {
-        @apply border-[1px] border-transparent hover:border-blue-500 bg-black/20 transition-all;
+        @apply border-[1px] border-transparent hover:border-teal-500 bg-black/20 transition-all;
         @apply p-4 m-2 rounded-md;
         .date {
           @apply text-sm text-white/50 pl-2;
@@ -68,6 +68,10 @@
         .description {
           @apply font-light;
         }
+      }
+      &:hover .circle {
+        @apply border-teal-500;
+        box-shadow: 0 0 1rem rgb(20 184 166);
       }
     }
   }

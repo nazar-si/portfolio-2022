@@ -1,7 +1,7 @@
 import style from "./roadmap.module.css"
 import common from "./common.module.css"
 import React from 'react'
-import { GitCommit } from "tabler-icons-react"
+import { GitCommit, GitFork, RotateDot } from "tabler-icons-react"
 
 const Entries = [
     {
@@ -36,9 +36,9 @@ export default function roadmap() {
             {Entries.map((e, i) => <div className={style.entry} key={i}>
                 <div className={style.road}>
                     <div className={style.circle}>
-                        <GitCommit />
+                        {i == 0 ? <RotateDot /> : <GitCommit />}
                     </div>
-                    {i != Entries.length - 1 && <div className={style.line}></div>}
+                    <div className={style.line}></div>
                 </div>
                 <div className={style.content}>
                     <div className={style.date}>{formatter.format(e.date)}</div>
@@ -46,6 +46,16 @@ export default function roadmap() {
                     <div className={style.description}>{e.description}</div>
                 </div>
             </div>)}
+            <div className={style.entry}>
+                <div className={style.road}>
+                    <div className={style.circle}>
+                        <GitFork className="rotate-180"/>
+                    </div>
+                </div>
+                <div className={style.content + " text-blue-50 underline hover:text-teal-400 transition-all cursor-pointer"}>
+                    <div className={style.title}>Show all events...</div>
+                </div>
+            </div>
         </div>
     </div>
   )
