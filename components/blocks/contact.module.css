@@ -1,0 +1,63 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @apply my-16;
+    .content{
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        width: 90%;
+        max-width: 1000px;  
+        @apply my-8;
+    }
+    .form{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 1rem;
+        flex: 1;
+        input,textarea{
+            background: #8881;
+            border: 1px solid #fff2;
+            @apply rounded-md p-2 focus:border-blue-500 outline-none;
+            &::placeholder{
+                @apply text-zinc-500;
+                text-transform: capitalize;
+            }
+            width: 100%;
+            resize: none;
+            &::-webkit-scrollbar{
+                width: 8px;
+            }
+            &::-webkit-scrollbar-track{
+                background: transparent;
+            }
+            &::-webkit-scrollbar-thumb{
+                border-radius: 12px;
+                background: #8884;
+            }
+            min-width: 16rem;
+        }
+    }
+    .info{
+        min-width: 16rem;
+        @apply text-zinc-300;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        .row{
+            display: flex;
+            gap: 1rem;
+            .icon{
+                width: 32px;
+                @apply text-white;
+            }
+            a{
+                text-decoration: underline;
+                @apply text-white hover:text-blue-500 transition-all;
+            }
+        }
+    }
+}
