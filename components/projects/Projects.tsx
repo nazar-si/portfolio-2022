@@ -1,7 +1,14 @@
 import React from 'react'
 import style from "./style.module.css"
 
-const data = {
+type project = {
+  title: string,
+  status: any,
+  priority: any,
+  team: any,
+  uec: any[]
+}
+const data : {teams: any, priority: any[], statuses: any[], uecs: any, projects: project[]} = {
   "teams": {
       "ec": "Entropy C",
       "aen": "AEN Team",
