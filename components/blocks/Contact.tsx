@@ -9,11 +9,12 @@ export default function Contact() {
       <div className={common.title}>
         Contact
       </div>
-      <div className={style.content}>
+      <div className={style.content} onSubmit={(e)=>e.preventDefault()}>
         <form className={style.form}>
           <input type="text" name="" id="" placeholder="name"/>
           <input type="text" name="" id="" placeholder="Phone / Email"/>
           <textarea name="message" id="" rows={10} ></textarea>
+          <button>Submit</button>
         </form>
         <div className={style.info}>
           <div className={style.row}>
@@ -33,13 +34,17 @@ export default function Contact() {
             <div className={style.text}><a href="mailto:technotche@gmail.com">technotche@gmail.com</a></div>
           </div>
           <hr />
-          <div className="row">
-            <a href="https://github.com" className={style.icon}>
-              <BrandGithub />
+          <div className={style.row + " justify-center"}>
+            <a href="https://github.com" className={style.icon + " rounded-full border-[1px] w-12 h-12 flex items-center justify-center border-zinc-500 hover:border-blue-500"}>
+              <BrandGithub size={30} strokeWidth={1} />
             </a>
-            <a href="https://t.me/sciencekatze" className={style.icon}>
-              <BrandTelegram />
+            <a href="https://t.me/sciencekatze" className={style.icon + " rounded-full border-[1px] w-12 h-12 flex items-center justify-center border-zinc-500 hover:border-blue-500"}>
+              <BrandTelegram size={30} strokeWidth={1} />
             </a>
+          </div>
+          <hr />
+          <div className={style.row}>
+            <div className="text-zinc-500">@ All right reserved</div>
           </div>
         </div>
       </div>

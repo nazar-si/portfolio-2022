@@ -7,10 +7,13 @@
     .content{
         display: flex;
         gap: 2rem;
-        flex-wrap: wrap;
+
         width: 90%;
         max-width: 1000px;  
         @apply my-8;
+        @media screen and (max-width: 624px) {
+            flex-direction: column;
+        }
     }
     .form{
         display: flex;
@@ -40,6 +43,9 @@
             }
             min-width: 16rem;
         }
+        button{
+            @apply rounded-md p-2 bg-blue-500 hover:bg-transparent border-[1px] border-transparent hover:border-blue-500 transition-all focus:ring-4 outline-none ;
+        }
     }
     .info{
         min-width: 16rem;
@@ -51,12 +57,15 @@
             display: flex;
             gap: 1rem;
             .icon{
-                width: 32px;
+                min-width: 32px;
                 @apply text-white;
             }
             a{
                 text-decoration: underline;
                 @apply text-white hover:text-blue-500 transition-all;
+            }
+            @media screen and (max-width: 624px) {
+                justify-content: center;
             }
         }
         hr{
