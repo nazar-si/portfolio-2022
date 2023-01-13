@@ -1,0 +1,68 @@
+{
+    "teams": {
+        "ec": "Entropy C",
+        "aen": "AEN Team",
+        "dl": "Dima Labuznyi",
+        "s": "Solo"
+    },
+    "priority": [
+        "Urgent", "High", 
+        "Major", "Minor", 
+        "Side", "Ignore", 
+        "Extra"
+    ],
+    "statuses": [
+        "To do", "In Progress", "Waiting", "Canceled", "Done"
+    ],
+    "uecs": {
+        "pro": "Programming",
+        "com": "Community",
+        "std": "Study",
+        "tls": "Tools",
+        "b2b": "B2B",
+        "man": "Management",
+        "des": "Design",
+        "eco": "Economics",
+        "enr": "Energy",
+        "eng": "Engine",
+        "phy": "Physics",
+        "urb": "Urbanistic"
+    },
+    "projects" : [
+        {
+            "title": "Second Brain",
+            "status": 1,
+            "priority": 1,
+            "team": "ec",
+            "uec": ["pro", "tls", "man"]
+        },
+        {
+            "title": "YourEdu",
+            "status": 0,
+            "priority": 1,
+            "team": "ec",
+            "uec": ["pro", "std", "com"]
+        },
+        {
+            "title": "Refactor",
+            "status": 2,
+            "priority": 1,
+            "team": "aen",
+            "uec": ["pro", "enr", "man"]
+        },
+        {
+            "title": "AENetwork",
+            "status": 2,
+            "priority": 2,
+            "team": "aen",
+            "uec": ["pro", "enr", "eco"]
+        }
+        // {
+        //     "title": "",
+        //     "status": 1,
+        //     "priority": 0,
+        //     "team": "",
+        //     "uec": ["", ""]
+        // },
+    ]
+}

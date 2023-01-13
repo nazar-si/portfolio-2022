@@ -105,6 +105,7 @@ type App = {
     description: Array<string>
 }
 
+
 const Apps : Array<App> = [
     {
         palet: "white",

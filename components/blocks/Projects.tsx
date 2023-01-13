@@ -1,30 +1,66 @@
+import common from "./common.module.css"
 import React from 'react'
 import style from "./projects.module.css"
 import Card from '../card/Card'
+import Projects from "../projects/Projects"
+
+import { RotateDot, RotateClockwise, RotateClockwise2} from "tabler-icons-react"
+
+
+// const states = {
+//   done: {
+//     color: "text-teal-500 border-teal-500",
+//     icon: RotateDot
+//   },
+//   progress: {
+//     color: "text-blue-500 border-blue-500",
+//     icon: RotateClockwise
+//   },
+//   canceled: {
+//     color: "text-rose-500 border-rose-500",
+//     icon: RotateClockwise2
+//   },
+//   planed: {
+//     color: "text-zinc-600 border-zinc-600",
+//     icon: RotateClockwise2
+//   },
+//   waiting: {
+//     color: "text-purple-500 border-purple-500",
+//     icon: RotateClockwise2
+//   }
+// }
+// type state = keyof typeof states;
+
+// type projectType = "personal" | "team" | "experiment" | "research"
+
+// interface project {
+//   state: state, 
+//   title: string,
+//   description: string,
+//   date: Date,
+//   endDate?: Date, 
+//   role: string,
+//   type: projectType
+// }
+
+// const Projects : Array<project> = [
+//   {
+//     state : "done",
+//     title: "Test",
+//     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, suscipit iste. Ullam similique accusamus quo sapiente ad exercitationem, odit aliquam eius, corporis, obcaecati tempore. Consequuntur veniam fugiat quisquam voluptatum ab?",
+//     date: new Date(),
+//     role: "Developer",
+//     type: "team"
+//   }
+// ]
 
 export default function Comments() {
   return (
     <div className={style.wrapper}>
-      {/* <svg viewBox="0 0 558 558" width="300" height="300" fill="none" aria-hidden="true" className={style["rotate-clockwise"]     + " absolute mt-12"}><defs><linearGradient id=":R3b9m:" x1="79" y1="16" x2="105" y2="237" gradientUnits="userSpaceOnUse"><stop stop-color="#0084ff"></stop><stop offset="1" stop-color="#8400ff" stop-opacity="0"></stop></linearGradient></defs><path opacity=".2" d="M1 279C1 125.465 125.465 1 279 1s278 124.465 278 278-124.465 278-278 278S1 432.535 1 279Z" stroke="#0084ff"></path><path d="M1 279C1 125.465 125.465 1 279 1" stroke="url(#:R3b9m:)" stroke-linecap="round"></path></svg>
-      <svg viewBox="0 0 558 558" width="350" height="350" fill="none" aria-hidden="true" className={style["rotate-anticlockwise"] + " absolute mt-10"}><defs><linearGradient id=":R3b9m:" x1="79" y1="16" x2="105" y2="237" gradientUnits="userSpaceOnUse"><stop stop-color="#0084ff"></stop><stop offset="1" stop-color="#8400ff" stop-opacity="0"></stop></linearGradient></defs><path opacity=".2" d="M1 279C1 125.465 125.465 1 279 1s278 124.465 278 278-124.465 278-278 278S1 432.535 1 279Z" stroke="#0084ff"></path><path d="M1 279C1 125.465 125.465 1 279 1" stroke="url(#:R3b9m:)" stroke-linecap="round"></path></svg>
-      <svg viewBox="0 0 558 558" width="400" height="400" fill="none" aria-hidden="true" className={style["rotate-clockwise"]     + " absolute mt-8" }><defs><linearGradient id=":R3b9m:" x1="79" y1="16" x2="105" y2="237" gradientUnits="userSpaceOnUse"><stop stop-color="#0084ff"></stop><stop offset="1" stop-color="#8400ff" stop-opacity="0"></stop></linearGradient></defs><path opacity=".2" d="M1 279C1 125.465 125.465 1 279 1s278 124.465 278 278-124.465 278-278 278S1 432.535 1 279Z" stroke="#0084ff"></path><path d="M1 279C1 125.465 125.465 1 279 1" stroke="url(#:R3b9m:)" stroke-linecap="round"></path></svg>
-      <svg viewBox="0 0 558 558" width="450" height="450" fill="none" aria-hidden="true" className={style["rotate-anticlockwise"] + " absolute mt-4" }><defs><linearGradient id=":R3b9m:" x1="79" y1="16" x2="105" y2="237" gradientUnits="userSpaceOnUse"><stop stop-color="#0084ff"></stop><stop offset="1" stop-color="#8400ff" stop-opacity="0"></stop></linearGradient></defs><path opacity=".2" d="M1 279C1 125.465 125.465 1 279 1s278 124.465 278 278-124.465 278-278 278S1 432.535 1 279Z" stroke="#0084ff"></path><path d="M1 279C1 125.465 125.465 1 279 1" stroke="url(#:R3b9m:)" stroke-linecap="round"></path></svg>
-      <svg viewBox="0 0 558 558" width="500" height="500" fill="none" aria-hidden="true" className={style["rotate-clockwise"]     + " absolute mt-2" }><defs><linearGradient id=":R3b9m:" x1="79" y1="16" x2="105" y2="237" gradientUnits="userSpaceOnUse"><stop stop-color="#0084ff"></stop><stop offset="1" stop-color="#8400ff" stop-opacity="0"></stop></linearGradient></defs><path opacity=".2" d="M1 279C1 125.465 125.465 1 279 1s278 124.465 278 278-124.465 278-278 278S1 432.535 1 279Z" stroke="#0084ff"></path><path d="M1 279C1 125.465 125.465 1 279 1" stroke="url(#:R3b9m:)" stroke-linecap="round"></path></svg>
-      <svg viewBox="0 0 558 558" width="550" height="550" fill="none" aria-hidden="true" className={style["rotate-anticlockwise"] + " absolute"      }><defs><linearGradient id=":R3b9m:" x1="79" y1="16" x2="105" y2="237" gradientUnits="userSpaceOnUse"><stop stop-color="#0084ff"></stop><stop offset="1" stop-color="#8400ff" stop-opacity="0"></stop></linearGradient></defs><path opacity=".2" d="M1 279C1 125.465 125.465 1 279 1s278 124.465 278 278-124.465 278-278 278S1 432.535 1 279Z" stroke="#0084ff"></path><path d="M1 279C1 125.465 125.465 1 279 1" stroke="url(#:R3b9m:)" stroke-linecap="round"></path></svg> */}
-        <div className={style.grid}>
-            <div className={style.column}>
-              <Card>Test</Card>
-              <Card>Test</Card>
-            </div>
-            <div className={style.column}>
-              <Card>Test</Card>
-              <Card>Test</Card>
-            </div>
-            <div className={style.column}>
-              <Card>Test</Card>
-              <Card>Test</Card>
-            </div>
-        </div>
+      <h2 className={common.title}>My other projects</h2>
+      <div className={style.content}>
+        <Projects></Projects>
+      </div>
     </div>
   )
 }

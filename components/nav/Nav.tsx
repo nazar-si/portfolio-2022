@@ -7,8 +7,8 @@ export default function Nav() {
         <div className={style.cover}></div>
         <div className={style.row}>
           <button className={style.selected}>Main</button>
-          <button>Blog</button>
-          <button>Projects</button>
+          {/* <button>Blog</button> */}
+          <button><a href="https://docs.nazarsi.com/projects">Projects</a></button>
         </div>
         <hr className={style.bottomLine} />
     </nav>

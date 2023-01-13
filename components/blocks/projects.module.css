@@ -2,45 +2,13 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   overflow: hidden;
-  .grid {
-    display: flex;
-    align-items: center;
+  gap: 1rem;
+  @apply my-16;
+  .content{
     width: 90%;
-    max-width: 1280px;
-    flex-wrap: wrap;
-    .column {
-      min-width: 20rem;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-  }
-  .rotate-clockwise {
-    animation: rotate-clockwise 5s linear infinite;
-  }
-  .rotate-anticlockwise {
-    animation: rotate-anticlockwise 5s linear infinite;
-  }
-  .rotate-clockwise,
-  .rotate-anticlockwise {
-    overflow: hidden;
-  }
-}
-
-@keyframes rotate-anticlockwise {
-  0% {
-    transform: rotate(0) scaleX(-1);
-  }
-  100% {
-    transform: rotate(-360deg) scaleX(-1);
-  }
-}
-@keyframes rotate-clockwise {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
+    max-width: fit-content;
+    z-index: 10;
   }
 }
