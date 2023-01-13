@@ -1,7 +1,7 @@
 import style from "./contact.module.css";
 import React from 'react'
 import common from "./common.module.css";
-import { Building, MapPin, Mail, } from "tabler-icons-react";
+import { Building, MapPin, Mail, BrandGithub, BrandTelegram} from "tabler-icons-react";
 
 export default function Contact() {
   return (
@@ -33,6 +33,14 @@ export default function Contact() {
             <div className={style.text}><a href="mailto:technotche@gmail.com">technotche@gmail.com</a></div>
           </div>
           <hr />
+          <div className="row">
+            <a href="https://github.com" className={style.icon}>
+              <BrandGithub />
+            </a>
+            <a href="https://t.me/sciencekatze" className={style.icon}>
+              <BrandTelegram />
+            </a>
+          </div>
         </div>
       </div>
     </div>

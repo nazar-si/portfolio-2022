@@ -59,5 +59,10 @@
                 @apply text-white hover:text-blue-500 transition-all;
             }
         }
+        hr{
+            border: none;
+            height: 1px;
+            background: #fff4;
+        }
     }
 }
