@@ -1,9 +1,10 @@
 import style from "./contact.module.css";
-import React from 'react'
+import React, { useState } from 'react'
 import common from "./common.module.css";
-import { Building, MapPin, Mail, BrandGithub, BrandTelegram} from "tabler-icons-react";
+import { Building, MapPin, Mail, BrandGithub, BrandTelegram, Send} from "tabler-icons-react";
 
 export default function Contact() {
+  const [submit, setSubmit] = useState(false);
   return (
     <div className={style.wrapper}>
       <div className={common.title}>
@@ -14,7 +15,13 @@ export default function Contact() {
           <input type="text" name="" id="" placeholder="name"/>
           <input type="text" name="" id="" placeholder="Phone / Email"/>
           <textarea name="message" id="" rows={10} ></textarea>
-          <button>Submit</button>
+          <button className="flex items-center justify-center" onClick={()=>{
+            setSubmit(true);
+            setTimeout(()=>{setSubmit(false)}, 2000)
+          }}>
+            {(!submit) && <div className={style.sendText}>Submit</div>}
+            {submit && <div className={style.send}><Send/></div>}
+          </button>
         </form>
         <div className={style.info}>
           <div className={style.row}>

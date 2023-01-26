@@ -20,7 +20,7 @@ export default function About() {
             <section className="text-light m-4">
               I am a lead frontend developer and project manager of Entropy Concept team - group of enthusiasts with a common main goal to bring innovation to the world.
               <br /> <br />
-              Currently I am studying physics and data science at Higher School of Economics. Development became essential in my life as it required to compute behavior of complex systems and analyse state of different models.
+              Currently I am studying physics and data science at Higher School of Economics. Development became essential in my life as it required to compute behavior of complex systems in physics and economics and is essential for study in general.
     
             </section>
           </div>

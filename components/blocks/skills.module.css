@@ -29,6 +29,10 @@
       box-shadow: 0 0 1rem rgb(59 130 246);
     }
   }
+  hr{
+    width: 90%;
+    @apply border-zinc-700;
+  }
 }
 
 .card {

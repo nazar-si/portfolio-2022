@@ -44,7 +44,15 @@
             min-width: 16rem;
         }
         button{
-            @apply rounded-md p-2 bg-blue-500 hover:bg-transparent border-[1px] border-transparent hover:border-blue-500 transition-all focus:ring-4 outline-none ;
+            @apply rounded-md p-2 bg-blue-500 hover:bg-blue-600 border-[1px] border-transparent hover:border-blue-500 transition-all focus:ring-4 outline-none ;
+        }
+        .send{
+            animation: 2s send;
+            animation-fill-mode: forwards;
+        }
+        .sendText{
+            animation: 0.5s sendText;
+            animation-fill-mode: forwards;
         }
     }
     .info{
@@ -73,5 +81,29 @@
             height: 1px;
             background: #fff4;
         }
+    }
+}
+
+@keyframes send{
+    0%{
+        opacity: 0;
+        transform: translate(100px);
+    }
+    35%, 65%{
+        opacity: 1;
+        transform: translate(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-100px);
+    }
+}
+
+@keyframes sendText {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }

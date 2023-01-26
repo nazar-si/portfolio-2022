@@ -26,7 +26,7 @@ export default function Projects() {
             <h2 className={common.title}>
                 Milestone Projects
             </h2>
-            <h3 className={common.subtitle}>Biggest projects I am working with.</h3>
+            <h3 className={common.subtitle}>Biggest projects I am working on.</h3>
             <div className={style.container}>
                 <div className={style.column}>
                     {projects.map((p, id)=>

@@ -29,6 +29,7 @@ import {
     BrandGit,
 } from "tabler-icons-react"
 import BrandStrapi from "../icons/BrandStrapi"
+import BrandNest from "../icons/BrandNest"
 import classNames from "classnames"
 import Card from "../card/Card"
 
@@ -111,28 +112,28 @@ const Apps : Array<App> = [
         palet: "white",
         icon: BrandGithub,
         name: "Github",
-        level:  90,
+        level:  80,
         description: ["Sole platform to store all my works and projects. It's been helpful for many years. Now I am especially interested in Github actions and looking forward to try them."],
     },
     {
         palet: "orange",
         icon: BrandGit,
         name: "Git",
-        level:  70,
+        level:  65,
         description: ["git add .", "git -m commit -m 'Project init'", "git push"],
     },
     {
         palet: "orange",
         icon: BrandSvelte,
         name: "Svelte",
-        level: 95,
+        level: 90,
         description: ["I've been using Svelte for half of the year and absolutely love it. Created several projects, including milestone ones. Had an opportunity to develop two libraries for it."],
     },
     {
         palet: "blue",
         icon: BrandReact,
         name: "React",
-        level: 90,
+        level: 80,
         description: ["First and beloved framework. So many stuff have been created and will be created very soon. Anyway, this site wouldn't been possible without it."],
     },
     {
@@ -146,14 +147,14 @@ const Apps : Array<App> = [
         palet: "teal",
         icon: CSharp,
         name: "C#",
-        level: 60,
+        level: 55,
         description: ["Language that was with me during all stages of programming study. Started as language for Unity 3D and ended up being main driver for ASP.Net backend development."],
     },
     {
         palet: "white",
         icon: BrandD3,
         name: "D3.js",
-        level: 20,
+        level: 15,
         description: ["'No way, our application must have beautiful data visualization!'"],
     },
     {
@@ -174,7 +175,14 @@ const Apps : Array<App> = [
         palet: "red",
         icon: BrandAdobe,
         name: "Adobe Tools",
-        level: 100,
+        level: 95,
+        description: ["Have been using adobe tools stack from 2017 and still have enjoyed process of working with art and designs both for professional and hobby usage. My favorite of all are Photoshop and Illustrator."],
+    },
+    {
+        palet: "red",
+        icon: BrandNest,
+        name: "Nest",
+        level: 35,
         description: ["Have been using adobe tools stack from 2017 and still have enjoyed process of working with art and designs both for professional and hobby usage. My favorite of all are Photoshop and Illustrator."],
     },
     {
@@ -188,21 +196,21 @@ const Apps : Array<App> = [
         palet: "blue",
         icon: BrandCypress,
         name: "Cypress",
-        level: 70,
+        level: 65,
         description: ["Still best way for me to implement E2E testing on any web-site and play with different things."],
     },
     {
         palet: "orange",
         icon: BrandBlender,
         name: "Blender",
-        level: 70,
+        level: 60,
         description: ["Just like playing with 3D models, especially when some of them required in projects featuring Three.js"],
     },
     {
         palet: "blue",
         icon: BrandDocker,
         name: "Docker",
-        level: 25,
+        level: 30,
         description: ["It helps to run someone's code even faster and deploy complex architecture in seconds."],
     },
     {
@@ -230,7 +238,7 @@ const Apps : Array<App> = [
         palet: "blue",
         icon: BrandTypescript,
         name: "TypeScript",
-        level: 100,
+        level: 95,
         description: ["JS could've been in that list, but I think world developed better option for any developer to use instead."],
     },
     {
@@ -251,7 +259,7 @@ const Apps : Array<App> = [
         palet: "blue",
         icon: BrandSolidjs,
         name: "Solid.js",
-        level: 15,
+        level: 10,
         description: ["Framework that will have bright future and may be regarded as React's ancestor for sure. It makes so many stuff obvious and easy, while providing great speed. Thing I adore studding more about."],
     },
     {
@@ -272,7 +280,7 @@ const Apps : Array<App> = [
         palet: "blue",
         icon: Database,
         name: "SQL",
-        level: 90,
+        level: 85,
         description: ["I studied PostgresSQL in my university. No matter how many ORM's I tried, sometimes I've just needed to use bare SQL that offered me full control over the database."],
     },
     {
@@ -282,11 +290,18 @@ const Apps : Array<App> = [
         level: 100,
         description: ["One application I've been using for my note taking experience. Not the best, but still the most loved."],
     },
+    // {
+    //     palet: "blue",
+    //     icon: null,
+    //     name: "",
+    //     level: 67,
+    //     description: [""]
+    // },
     {
         palet: "purple",
         icon: BrandStrapi,
         name: "Strapi",
-        level: 70,
+        level: 60,
         description: ["My first and mostly adored CMS. It offers best experience both for developers and administrators for managing and developing content for any web-site."],
     }
 ]
@@ -297,13 +312,13 @@ export default function Skills() {
     const [prevSelected, setPrevSelected] = useState(-1);
     return (
         <div className={style.wrapper}>
-            <h2 className={common.title}>My skills</h2>
+            <h2 className={common.title}>My hard skills</h2>
             <h3 className={common.subtitle}>Click something!</h3>
             <div className={style.container}>
 
                 <div className={style.icon}>
                     {Apps.map((e,i)=><>
-                    {(i == selected || i == prevSelected) && <div key={i} className={classNames({[style.remove]: i == prevSelected, [style.appear]: i == selected})}>
+                    {((i == selected || i == prevSelected) && e.icon) && <div key={i} className={classNames({[style.remove]: i == prevSelected, [style.appear]: i == selected})}>
                         <div className={style.backIcon}>
                             <e.icon size={150} strokeWidth={1} stroke={Palet[e.palet].back} fill={Palet[e.palet].back}></e.icon>
                         </div>
@@ -318,10 +333,10 @@ export default function Skills() {
                 <div className="flex-col items-center relative justify-center">
                         
                     <div className={style.skills}>
-                        {Apps.map((E, i)=>
-                            <button key={i} className={classNames(style.skill, {[style.selected] : i == selected})} onClick={()=>{setPrevSelected(selected); setSelected(i == selected?-1:i)}} title={E.name}>
+                        {Apps.map((E, i)=> { 
+                            return E.icon?<button key={i} className={classNames(style.skill, {[style.selected] : i == selected})} onClick={()=>{setPrevSelected(selected); setSelected(i == selected?-1:i)}} title={E.name}>
                                 <E.icon size={32} strokeWidth={1}/>
-                            </button>)}
+                            </button>:<hr></hr> })}
                     </div>
                 </div>
                 <div className={classNames(style.card, {[style.show] : selected != -1})}>
