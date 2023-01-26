@@ -6,6 +6,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return  <>
     <Head>
       <title>Nazar Si</title>
+      <meta name="description" content="Personal portfolio site" />
     </Head>
     <Component {...pageProps} />
   </>
