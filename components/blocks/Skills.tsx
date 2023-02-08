@@ -30,6 +30,7 @@ import {
 } from "tabler-icons-react"
 import BrandStrapi from "../icons/BrandStrapi"
 import BrandNest from "../icons/BrandNest"
+import BrandClickup from "../icons/BrandClickup"
 import classNames from "classnames"
 import Card from "../card/Card"
 
@@ -303,6 +304,13 @@ const Apps : Array<App> = [
         name: "Strapi",
         level: 60,
         description: ["My first and mostly adored CMS. It offers best experience both for developers and administrators for managing and developing content for any web-site."],
+    },
+    {
+        palet: "white",
+        icon: BrandClickup,
+        name: "ClickUp",
+        level: 75,
+        description: ["I've tried many application to manage my tasks. Same way I've used a lot of apps for team tasks tracking and management. Among all of them I never found one as great as ClickUp. Not it's my number one software for that kind of purposes."],
     }
 ]
 Apps.sort((a,b) => b.level - a.level)
