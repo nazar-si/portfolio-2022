@@ -51,7 +51,7 @@ const colors = {
     lwhite: "rgb(191 219 254 / 0.7)"
 }
 
-const Palet = {
+export const Palet = {
     blue: {
         back: colors.blue,
         second: colors.indigo,
@@ -99,7 +99,7 @@ const Palet = {
     }
 }
 
-type App = {
+export type App = {
     palet: keyof typeof Palet,
     icon: any,
     name: string,
