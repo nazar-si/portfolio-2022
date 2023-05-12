@@ -9,19 +9,21 @@ const Entries = [
         description: "For this hackathon I was building dashboard for monitoring of the condition of construction facilities. It was very tedious process and despite the fact that I haven't gotten any winning place I was very glad for experience. This project showed me how far I've gotten with React development, when it became tool that I can fully understand and control.",
         date: new Date("2023-04-11")
     },
-    // {
-    //     title: "Introducing Animaginary: High performance web animations",
-    //     description: "When you're building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.",
-    //     date: new Date("2022-09-02")
-    // },
-    // {
-    //     title: "Rewriting the cosmOS kernel in Rust",
-    //     description: "When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language with a lot of benefits, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.",
-    //     date: new Date("2022-08-22")
-    // }
+    {
+        title: "Creating gamification platform for VTB",
+        description: "The VTB Bank gamification platform is a fun and engaging way for users to track their progress and earn rewards, while also promoting the bank's services and products. Using Svelte allowed me to build a fast and responsive platform that integrates seamlessly with the bank's existing systems.",
+        date: new Date("2022-10-09")
+    },
+    {
+        title: "Refactor product for Rosseti",
+        description: "I have developed a website application using Svelte for analyzing the status of electrical equipment, with real-time equipment monitoring and an electric circuit builder for simulating emergency situations. It was certainly one of the greatest teamworks I've ever had.",
+        date: new Date("2022-08"),
+        dateEnd: new Date("2022-09-30")
+    }
 ]
 
 const formatter = new Intl.DateTimeFormat("en", {month: "long", year: "numeric", day: "numeric"})
+const formatterStart = new Intl.DateTimeFormat("en", {month: "long", day: "numeric"})
 
 export default function roadmap() {
   return (
@@ -41,7 +43,11 @@ export default function roadmap() {
                     <div className={style.line}></div>
                 </div>
                 <div className={style.content}>
-                    <div className={style.date}>{formatter.format(e.date)}</div>
+                    <div className={style.date}>
+                        {!e.dateEnd && <>{formatter.format(e.date)}</>}
+                        {e.dateEnd && <>{formatterStart.format(e.date)} - {formatter.format(e.dateEnd)}</>}
+                    
+                    </div>
                     <div className={style.title}>{e.title}</div>
                     <div className={style.description}>{e.description}</div>
                 </div>
