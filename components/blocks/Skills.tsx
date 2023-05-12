@@ -114,14 +114,14 @@ const Apps : Array<App> = [
         icon: BrandGithub,
         name: "Github",
         level:  80,
-        description: ["Sole platform to store all my works and projects. It's been helpful for many years. Now I am especially interested in Github actions and looking forward to try them."],
+        description: ["Sole platform to store all my works and projects. It's been helpful for many years. After trying Github Actions for CI/CD I certainly would use them form my large-scale projects."],
     },
     {
         palet: "orange",
         icon: BrandGit,
         name: "Git",
         level:  65,
-        description: ["git add .", "git -m commit -m 'Project init'", "git push"],
+        description: ["Plan of actions:", "git add .", "git commit -m 'minor fix'", "git push", "Hide from your team"],
     },
     {
         palet: "orange",
@@ -148,7 +148,7 @@ const Apps : Array<App> = [
         palet: "teal",
         icon: CSharp,
         name: "C#",
-        level: 55,
+        level: 40,
         description: ["Language that was with me during all stages of programming study. Started as language for Unity 3D and ended up being main driver for ASP.Net backend development."],
     },
     {
@@ -183,8 +183,8 @@ const Apps : Array<App> = [
         palet: "red",
         icon: BrandNest,
         name: "Nest",
-        level: 35,
-        description: ["Have been using adobe tools stack from 2017 and still have enjoyed process of working with art and designs both for professional and hobby usage. My favorite of all are Photoshop and Illustrator."],
+        level: 30,
+        description: ["Modular architecture, dependency injections, typescript support, web sockets - this framework has everything needed for almost any project I can imagine. This is the definitely one I'll be studying following years."],
     },
     {
         palet: "purple",
