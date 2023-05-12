@@ -114,14 +114,14 @@ const Apps : Array<App> = [
         icon: BrandGithub,
         name: "Github",
         level:  80,
-        description: ["Sole platform to store all my works and projects. It's been helpful for many years. After trying Github Actions for CI/CD I certainly would use them form my large-scale projects."],
+        description: ["Sole platform to store all my works and projects. It's been helpful for many years. After trying Github Actions for CI/CD I certainly would use them for my large-scale projects."],
     },
     {
         palet: "orange",
         icon: BrandGit,
         name: "Git",
         level:  65,
-        description: ["Plan of actions:", "git add .", "git commit -m 'minor fix'", "git push", "Hide from your team"],
+        description: ["Plan of actions:", "1. git add .", "2. git commit -m 'minor fix'", "3. git push", "4. Hide from your team"],
     },
     {
         palet: "orange",
@@ -191,7 +191,7 @@ const Apps : Array<App> = [
         icon: BrandFigma,
         name: "Figma",
         level: 95,
-        description: ["- I have prototype design in Figma. Do you have it?", "- Sure! "],
+        description: ["- I have prototype design in Figma. Can you review it and make some fixes?", "- Sure! "],
     },
     {
         palet: "blue",
