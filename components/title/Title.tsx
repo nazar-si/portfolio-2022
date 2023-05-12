@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 
 
-const title = "Fullstack Web-Developer"
+const title = "Frontend Web-Developer"
 const subtitle = "Programmer, Physicist, Math-enjoyer and Researcher"
 
 export default function Title() {

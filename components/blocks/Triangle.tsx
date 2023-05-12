@@ -102,7 +102,7 @@ export default function Triangle({}: Props) {
                     Web Development
                 </div>
                 <div className={style.description}>
-                    Some additional info
+                    I am into web-dev since 2019, when I participated in several projects involving creation of web-application for enterprise need. 
                 </div>
             </div>
             <div className={classNames(style.block, selected==2 && style.show)} style={{transform: `rotateX(${+rotation + 30 -   120}deg) ${selected!==2?"rotateY(45deg) translateZ(200px)":""}`}}>
@@ -110,7 +110,7 @@ export default function Triangle({}: Props) {
                     Data Analysis
                 </div>
                 <div className={style.description}>
-                    Some additional info
+                    My minor university degree is physical and intellectual data analysis, for which I studied databases and machine learning.   
                 </div>
             </div>
             <div className={classNames(style.block, selected==3 && style.show)} style={{transform: `rotateX(${+rotation + 30 + 120}deg) ${selected!==3?"rotateY(45deg) translateZ(200px)":""}`}}>
@@ -118,7 +118,7 @@ export default function Triangle({}: Props) {
                     Sciences
                 </div>
                 <div className={style.description}>
-                    Some additional info
+                    My major is physics. It helped me to embrase my passion for hard work and to develop my problem-solving skills. 
                 </div>
             </div>
         </div>
